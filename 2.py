@@ -366,24 +366,19 @@ def current_weather(city, unit= 'C'):
             if unit == 'F':
                 temperature= convert_to_fahrenheit(temperature)
 
-            def encode_image_to_base64(file_path):
-                try:
-                    with open(file_path, "rb") as img_file:
-                        return base64.b64encode(img_file.read()).decode("utf-8")
-                except FileNotFoundError:
-                    return None
+            # def encode_image_to_base64(file_path):
+            #     try:
+            #         with open(file_path, "rb") as img_file:
+            #             return base64.b64encode(img_file.read()).decode("utf-8")
+            #     except FileNotFoundError:
+            #         return None
 
             # Generate dynamic image
             if icon != 'N/A':
-                icon_url = (fr"https://raw.githubusercontent.com/Kevinsheta/PROJECT/main/Icon/{icon}.png")
-                base64_image = encode_image_to_base64(icon_url)
-                if base64_image:
-                    image_html = f'<img src="data:image/png;base64,{base64_image}" alt="Weather Icon" class="weather-icon1">'
-                else:
-                    image_html = '<p>No Icon Available</p>'
+                icon_url = f"https://raw.githubusercontent.com/Kevinsheta/PROJECT/main/Icon/{icon}.png"
+                image_html = f'<img src="{icon_url}" alt="Weather Icon" class="weather-icon1">'
             else:
                 image_html = '<p>No Icon Available</p>'
-
 
             # HTML for layout
             st.markdown(
