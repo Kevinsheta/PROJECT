@@ -18,7 +18,7 @@ from streamlit_cookies_manager import EncryptedCookieManager
 # from st_aggrid import AgGrid, GridOptionsBuilder, GridUpdateMode
 
 # API Key for Visual Crossing
-API_key = "B3QKPV67E22389QMWL55EZ8ZR"
+API_key = "EN8XLY62ZBDXB9DMYF3PXWTH2"
 
 # history_file= "search_history.json"
 
