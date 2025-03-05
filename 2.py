@@ -375,7 +375,7 @@ def current_weather(city, unit= 'C'):
 
             # Generate dynamic image
             if icon != 'N/A':
-                icon_url = (fr"E:\Python.0\Weather live graph\Icon\{icon}.png")
+                icon_url = (fr"https://raw.githubusercontent.com/Kevinsheta/PROJECT/main/Icon/{icon}.png")
                 base64_image = encode_image_to_base64(icon_url)
                 if base64_image:
                     image_html = f'<img src="data:image/png;base64,{base64_image}" alt="Weather Icon" class="weather-icon1">'
