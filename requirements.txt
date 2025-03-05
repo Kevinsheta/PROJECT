@@ -5,3 +5,10 @@ plotly
 pandas
 numpy
 folium
+streamlit_folium
+base64
+json
+os
+time
+streamlit-cookies-manager
+st-aggrid
