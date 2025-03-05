@@ -18,7 +18,7 @@ from streamlit_cookies_manager import EncryptedCookieManager
 # from st_aggrid import AgGrid, GridOptionsBuilder, GridUpdateMode
 
 # API Key for Visual Crossing
-API_key = "UKQRJXWMZNSMP72DUKS8LAE64"
+API_key = "B3QKPV67E22389QMWL55EZ8ZR"
 
 # history_file= "search_history.json"
 
@@ -45,10 +45,6 @@ def update_cookies(history):
     cookies['search_history']= json.dumps(history)
 
 def save_history(city):
-    # Validate if the city exists by fetching weather data
-    if not current_weather(city, "C"):  # Check weather in Celsius just for validation
-        return  # Stop the function without saving the incorrect city
-
     # Prevent duplicates
     if city in [entry["City"] for entry in st.session_state['search_history']]:
         return  # City is already in history, no need to add again
