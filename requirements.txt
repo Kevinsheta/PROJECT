@@ -1,0 +1,7 @@
+streamlit
+requests
+meteostat
+plotly
+pandas
+numpy
+folium
